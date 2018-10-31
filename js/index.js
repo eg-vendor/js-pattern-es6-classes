@@ -18,3 +18,15 @@ window.bab = {
         'banana' : fundraiser.banana
     }
 };
+window.q = function (selectString) {
+    // Query for element list
+    return document.querySelectorAll (selectString);
+};
+window.a = function (elmt) {
+    // All attributes of an element
+    var rtn = {};
+    for (var name of elmt.getAttributeNames()) {
+	    rtn[name] = elmt.getAttribute (name);
+    }
+    return rtn;
+};
